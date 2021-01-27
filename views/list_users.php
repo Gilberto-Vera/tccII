@@ -32,9 +32,11 @@ include_once('navbar.php');
     								<td><?php echo $user['type']; ?></td>
 
     								<td>
-   <a href="index.php?controller=users&edit=<?php echo $user['id']; ?> "><span class="glyphicon glyphicon-edit"></span> editar</a>
-   <a href="index.php?controller=users&del=<?php echo $user['id']; ?> " onclick="return confirm('Are you sure?')"><span
- class="glyphicon glyphicon-trash"></span>Apagar</a>
+   										<a href="index.php?controller=users&edit=<?php echo $user['id']; ?> ">
+										   <span class="glyphicon glyphicon-edit"></span>editar</a>
+   										<a href="index.php?controller=users&del=<?php echo $user['id']; ?> " 
+										   onclick="return confirm('Você tem certeza que deseja excluir este usuário?')">
+										   <span class="glyphicon glyphicon-trash"></span>Apagar</a>
 
     								</td>
     							</tr>

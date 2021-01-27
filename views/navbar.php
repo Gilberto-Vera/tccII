@@ -2,18 +2,29 @@
 		<div class="navbar-collapse collapse">
 			<div class="container">
 				<?php if(isset($_SESSION['username'])) { ?>
+					<nav class="navbar default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">SGCC</a>
+						</div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Page 1</a></li>
+							<li><a href="#">Page 2</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="data-toggle">
+									<i class="glyphicon glyphicon-user">
+									</i>Bem Vindo:<?= $_SESSION['username'];?>
+								</a>
+							</li>
+							<li><a href="index.php?controller=logout">
+							<b class="glyphicon glyphicon-log-out"></b> Sair </a></li>
+						</ul>
+					</div>
+					</nav>
 				
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="data-toggle">
-							<i class="glyphicon glyphicon-user"></i>
-							
-								Bem Vindo: <?= $_SESSION['username'];?>
-							
-							</a>
-					</li>
-					<li><a href="index.php?controller=logout"><b class="glyphicon glyphicon-log-out"></b> Sair </a></li>
-				</ul>
 				<?php } ?>
 			</div>
 		</div>

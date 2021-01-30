@@ -10,5 +10,4 @@ if (isset($_GET['controller']) ) {
 }else{
 	require_once('controllers/login.php');		
 }
-
 ?>

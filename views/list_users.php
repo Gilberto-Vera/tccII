@@ -4,8 +4,6 @@ include_once('navbar.php');
 ?>
 <div class="container">
 		<div class="row">
-
-    		
   			<div class="tab-pane active" id="list">
   				<br/>
   				<p><a href="index.php?controller=users&add">+ Adicionar usuário</a></p>
@@ -39,9 +37,8 @@ include_once('navbar.php');
 										   <span class="glyphicon glyphicon-trash"></span>Apagar</a>
 
     								</td>
-    							</tr>
-    						
-<?php } ?>
+    							</tr>						
+						<?php }; ?>
     						</tbody>
   					</table>
 				</div>

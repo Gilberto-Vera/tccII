@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$("#login").click(function(){
 		var username=$('#username').val();
 		var password=$('#password').val();
-		console.log(username,password);
+		//console.log(username,password);
 		$.ajax({
 			type:"POST",
 			dataType:'json',
@@ -11,17 +11,14 @@ $(document).ready(function(){
 			success:function(response){
 				if(response.data==true){
 					$("#message").html(response.message);
-					window.location='index.php?controller=users';
+					window.location='index.php?controller=main';
 				}else{
 					$("#message").html(response.message);
 				}
 			}
 			,error: function(xhr, status, error) {
 				alert(xhr.responseText);
-			  }
-			// ,error:function(){
-			// // 	alert('Erro geral no sistema');
-			// }
+			}
 		});
 	});
 });

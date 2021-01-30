@@ -1,7 +1,6 @@
 <?php 
 include_once('head.php');
 include_once('navbar.php');
-
 ?>
 <section id="page_login">
 	<div class="container">

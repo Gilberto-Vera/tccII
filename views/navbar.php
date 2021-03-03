@@ -8,15 +8,16 @@
 							<a class="navbar-brand" href="#">SGCC</a>
 						</div>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#">Page 1</a></li>
-							<li><a href="#">Page 2</a></li>
+							<!-- <li class="active"><a href="#">Home</a></li> -->
+							<li><a href="#">Cliente</a></li>
+							<li><a href="#">Evento</a></li>
+							<li><a href="#">Fornecedor</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
 								<a href="#" class="data-toggle">
 									<i class="glyphicon glyphicon-user">
-									</i>Bem Vindo:<?= $_SESSION['username'];?>
+									</i>Bem Vindo: <?= $_SESSION['username'];?>
 								</a>
 							</li>
 							<li><a href="index.php?controller=logout">

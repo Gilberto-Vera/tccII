@@ -20,7 +20,7 @@ $(document).ready(function(){
 		<?php if (isset($msg)){ ?>
 		<div <?php echo $class_stat;?> role="alert"><?php echo $msg; ?><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
 	<?php } ?>
-		<form role="form" action="index.php?controller=users&add" method="POST">
+		<form role="form" action="index.php?controller=main&add" method="POST">
 
   					
 		<div class="form-group">
@@ -49,7 +49,7 @@ value="">
   					</div>
   					
   					<button type="submit" class="btn btn-primary" id="submit">Salvar</button>
-  					<a href="index.php?controller=users"><button type="button" class="btn btn-success">Voltar</button></a>
+  					<a href="index.php?controller=main"><button type="button" class="btn btn-success">Voltar</button></a>
 				</form>
                 </div>
             </div>

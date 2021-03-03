@@ -15,7 +15,9 @@ include_once('navbar.php');
 		<div class="tab-content">
   			<div class="tab-pane active" id="list">
   				<br/>
-  				<p><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add Data</button></p>
+  					<p><button type="button" class="btn btn-primary">
+					  <span class="glyphicon glyphicon-plus">
+					  </span> Add Data</button></p>
   				<br/>
   				<div class="table-responsive">
   					<table class="table table-hover">
@@ -39,8 +41,10 @@ include_once('navbar.php');
     								<td><?php echo $user['type']; ?></td>
 
     								<td>
-   <a href="index.php?controller=users&edit=<?php echo $user['id']; ?>"><span class="glyphicon glyphicon-edit"></span> edit</a>
-   <a href="index.php?controller=users&del=<?php echo $user['id']; ?>"><span class="glyphicon glyphicon-trash"></span> del</a>
+   										<a href="index.php?controller=users&edit=<?php echo $user['id']; ?>">
+										   <span class="glyphicon glyphicon-edit"></span> edit</a>
+   										<a href="index.php?controller=users&del=<?php echo $user['id']; ?>">
+										   <span class="glyphicon glyphicon-trash"></span> del</a>
     								</td>
     							</tr>
     						

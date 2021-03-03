@@ -31,7 +31,7 @@ if ( !isset($_GET['edit']) && !isset($_GET['del']) && !isset($_GET['add']) ){
 elseif (isset($_GET['del'])){
 	$where = array("id" => $_GET['del']);
 	del_user($conn,$where);	
-	header("Location: index.php?controller=users"); 
+	header("Location: index.php?controller=main"); 
 	exit();
 }
 

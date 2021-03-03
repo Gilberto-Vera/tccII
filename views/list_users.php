@@ -6,7 +6,7 @@ include_once('navbar.php');
 		<div class="row">
   			<div class="tab-pane active" id="list">
   				<br/>
-  				<p><a href="index.php?controller=users&add">+ Adicionar usuário</a></p>
+  				<p><a href="index.php?controller=main&add">+ Adicionar usuário</a></p>
   				<br/>
   				<div class="table-responsive">
   					<table class="table table-hover">
@@ -30,9 +30,9 @@ include_once('navbar.php');
     								<td><?php echo $user['type']; ?></td>
 
     								<td>
-   										<a href="index.php?controller=users&edit=<?php echo $user['id']; ?> ">
+   										<a href="index.php?controller=main&edit=<?php echo $user['id']; ?> ">
 										   <span class="glyphicon glyphicon-edit"></span>editar</a>
-   										<a href="index.php?controller=users&del=<?php echo $user['id']; ?> " 
+   										<a href="index.php?controller=mains&del=<?php echo $user['id']; ?> " 
 										   onclick="return confirm('Você tem certeza que deseja excluir este usuário?')">
 										   <span class="glyphicon glyphicon-trash"></span>Apagar</a>
 
@@ -45,7 +45,7 @@ include_once('navbar.php');
 				<ul class="pagination">
   				<?php for ($i=1; $i<=$numberOfPages; $i++) { ?>  
 				<?php $class_active = ($page==$i)?"class='active'":$class_active="";?>
-		             	<li <?php echo $class_active; ?>><a href="index.php?controller=users&page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+		             	<li <?php echo $class_active; ?>><a href="index.php?controller=main&page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
 				<?php }; ?>
 				</ul>
   			

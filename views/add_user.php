@@ -7,7 +7,6 @@ $(document).ready(function(){
   
 });
 
-
 </script>
  <!-- edit Section -->
 <section id="page_add" class="page_add">
@@ -18,9 +17,10 @@ $(document).ready(function(){
 		<hr>
 		
 		<?php if (isset($msg)){ ?>
-		<div <?php echo $class_stat;?> role="alert"><?php echo $msg; ?><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+		<div <?php echo $class_stat;?> role="alert"> <?php echo $msg;?> <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
 	<?php } ?>
-		<form role="form" action="index.php?controller=main&add" method="POST">
+	
+		<form role="form" action="index.php?controller=client&add" method="POST">
 
   					
 		<div class="form-group">
@@ -39,17 +39,15 @@ $(document).ready(function(){
 
   					<div class="form-group">
     						<label for="email">Email</label>
-    						<input type="email"  required 	class="form-control" name="email" id="email" placeholder="Email"
-value="">
+    						<input type="email"  required 	class="form-control" name="email" id="email" placeholder="Email" value="">
   					</div>
   					<div class="form-group">
     						<label for="type">Tipo</label>
-    						<input type="text" class="form-control" maxlength="15" size="15" name="type" id="type" placeholder="Tipo"
-value="">
+    						<input type="text" class="form-control" maxlength="15" size="15" name="type" id="type" placeholder="Tipo" value="">
   					</div>
   					
   					<button type="submit" class="btn btn-primary" id="submit">Salvar</button>
-  					<a href="index.php?controller=main"><button type="button" class="btn btn-success">Voltar</button></a>
+  					<a href="index.php?controller=client"><button type="button" class="btn btn-success">Voltar</button></a>
 				</form>
                 </div>
             </div>

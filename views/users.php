@@ -5,10 +5,10 @@ include_once('navbar.php');
 <div class="container">
 		<div class="row">
 
-    		<!-- Nav tabs -->
+    	<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
   			<li class="active"><a href="#list" role="tab" data-toggle="tab">List</a></li>
-  			<li><a href="#edit" role="tab" data-toggle="tab">Add</a></li>
+  			<li><a href="#add" role="tab" data-toggle="tab">Add</a></li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -48,7 +48,7 @@ include_once('navbar.php');
     								</td>
     							</tr>
     						
-<?php } ?>
+						<?php } ?>
     						</tbody>
   					</table>
 				</div>
@@ -62,11 +62,11 @@ include_once('navbar.php');
   					<li><a href="#">&raquo;</a></li>
 				</ul>
   			</div>
-  			<div class="tab-pane" id="edit">
+  			<div class="tab-pane" id="add">
   				<br/>
-  				<div class="alert alert-success" role="alert">Berhasil <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
-				<div class="alert alert-warning" role="alert">Ada sedikit masalah <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
-				<div class="alert alert-danger" role="alert">Error, coba lagi <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+  				<div class="alert alert-success" role="alert"> <span class="glyphicon glyphicon-ok-circle"></span> Berhasil <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+				<div class="alert alert-warning" role="alert"> <span class="glyphicon glyphicon-ban-circle"></span> Ada sedikit masalah <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+				<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-remove-circle"></span> Error, coba lagi <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
   				<br/>
   				<form role="form">
   					<div class="form-group">

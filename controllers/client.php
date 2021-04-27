@@ -1,5 +1,6 @@
 <?php
-locked();
+
+// locked();
 include_once('models/users.php');
 
 //show users list
@@ -30,9 +31,13 @@ if ( !isset($_GET['edit']) && !isset($_GET['del']) && !isset($_GET['add']) ){
 //deleted action
 elseif (isset($_GET['del'])){
 	$where = array("id" => $_GET['del']);
-	del_user($conn,$where);	
-	header("Location: index.php?controller=main"); 
-	exit();
+	del_user($conn,$where);
+	$msg = "Dados atualizados.";
+	$class_stat = 'class="alert alert-info"';
+	$icon = '"glyphicon glyphicon-ok-circle"';
+
+	header("Location: index.php?controller=client"); 
+	// exit();
 }
 
 //edit action
@@ -40,11 +45,12 @@ elseif (isset($_GET['edit']) && is_numeric($_GET['edit'])){
 	//if form is submitted.
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$where_condition = array("id" => $_GET['edit']);		
-    		$msg = "";
+    	$msg = "";
 		$class_stat = 'class="alert alert-info"';
 		if(trim($_POST['password']) != trim($_POST['confirm_password'])){
 			$msg = "As senhas não correspondem.";
 			$class_stat = 'class="alert alert-warning"';
+			$icon = '"glyphicon glyphicon-ban-circle"';
 		}else{
 			$_POST['password'] = md5($_POST['password']);
 			unset($_POST['confirm_password']);
@@ -53,9 +59,11 @@ elseif (isset($_GET['edit']) && is_numeric($_GET['edit'])){
 			if($is_updated){
 				$msg = "Dados atualizados.";
 				$class_stat = 'class="alert alert-info"';
+				$icon = '"glyphicon glyphicon-ok-circle"';
 			}else{
 				$msg = "Erro de entrada.";
 				$class_stat = 'class="alert alert-warning"';
+				$icon = '"glyphicon glyphicon-remove-circle"';
 			}
 		}
 		
@@ -70,8 +78,7 @@ elseif (isset($_GET['edit']) && is_numeric($_GET['edit'])){
 elseif(isset($_GET['add'])){
 	//if form is submitted.
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
-		
-    		$msg = "";
+		$msg = "";
 		$class_stat = 'class="alert alert-info"';
 		if(trim($_POST['password']) != trim($_POST['confirm_password'])){
 			$msg = "As senhas não correspondem.";

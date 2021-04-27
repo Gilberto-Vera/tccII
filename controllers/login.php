@@ -1,3 +1,3 @@
-<?php 
-include('views/login.php');
+<?php
+    include('views/login.php');
 ?>

@@ -11,7 +11,7 @@ $(document).ready(function(){
 			success:function(response){
 				if(response.data==true){
 					$("#message").html(response.message);
-					window.location='index.php?controller=main';
+					window.location='index.php?controller=home';
 				}else{
 					$("#message").html(response.message);
 				}

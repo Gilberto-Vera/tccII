@@ -1,9 +1,6 @@
-<?php 
-include_once('head.php');
-include_once('navbar.php');
-?>
+
 <div class="container">
-		<div class="row">
+	<div class="row">
 
     	<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
@@ -102,8 +99,4 @@ include_once('navbar.php');
   			</div>
 		</div>
     </div>
-
-
-<?php 
-include_once('footer.php');
-?>
+</div>

@@ -7,8 +7,8 @@ include_once('navbar.php');
 
     	<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
-  			<li class="active"><a href="#list" role="tab" data-toggle="tab">Lista de Clientes</a></li>
-  			<li><a href="#add" role="tab" data-toggle="tab">Adcionar Cliente</a></li>
+  			<li class="active"><a href="#list" role="tab" data-toggle="tab"> Lista de Clientes </a></li>
+  			<li><a href="#add" role="tab" data-toggle="tab"> Adcionar Cliente </a></li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -32,14 +32,14 @@ include_once('navbar.php');
     							<tr>
     								<td><?php echo $user['username']; ?></td>
     								<td><?php echo $user['email']; ?></td>
-    								<td><?php echo $user['fone']; ?></td>
+    								<td><?php echo $user['phone']; ?></td>
 
     								<td>
    										<a href="index.php?controller=client&edit=<?php echo $user['id']; ?>">
-										   <span class="glyphicon glyphicon-edit"></span> editar </a>
+										   <span class="glyphicon glyphicon-edit"></span> Editar </a>
    										<a href="index.php?controller=client&del=<?php echo $user['id']; ?>"
 										   onclick="return confirm('Você tem certeza que deseja excluir este cliente?')">
-										   <span class="glyphicon glyphicon-trash"></span> apagar </a>
+										   <span class="glyphicon glyphicon-trash"></span> Apagar </a>
     								</td>
     							</tr>
     						
@@ -62,23 +62,31 @@ include_once('navbar.php');
 				<?php } ?>
   				<form role="form">
   					<div class="form-group">
-    						<label for="username">Nome do cliente</label>
+    						<label for="username"> Nome </label>
     						<input type="text" class="form-control" id="username" placeholder="Nome">
   					</div>
   					<div class="form-group">
-    						<label for="cpf">CPF</label>
+    						<label for="cpf"> CPF </label>
+    						<input type="text" class="form-control" id="CPF" placeholder="CPF">
+  					</div>
+  					<div class="form-group">
+    						<label for="address"> Endereço </label>
     						<input type="text" class="form-control" id="address" placeholder="Endereço">
   					</div>
   					<div class="form-group">
-    						<label for="exampleInputtxt1">Text</label>
-    						<input type="text" class="form-control" id="exampleInputtxt1" placeholder="Text">
+    						<label for="email"> Email </label>
+    						<input type="email" class="form-control" id="email" placeholder="Endereço de email">
   					</div>
   					<div class="form-group">
-    						<label for="exampleInputurl1">Site</label>
-    						<input type="url" class="form-control" id="exampleInputurl1" placeholder="http://">
+    						<label for="email"> Senha </label>
+    						<input type="password" class="form-control" id="password" placeholder="Senha">
   					</div>
-  					<button type="submit" class="btn btn-primary">Submit</button>
-  					<button type="button" class="btn btn-success">Back</button>
+  					<div class="form-group">
+    						<label for="email"> Confirmar Senha </label>
+    						<input type="password" class="form-control" id="confirm_password" placeholder="Confirmar Senha">
+  					</div>
+  					<button type="submit" class="btn btn-primary"> Salvar </button>
+  					<button type="button" class="btn btn-success"> Voltar </button>
 				</form>
 				<br/>
   			</div>
